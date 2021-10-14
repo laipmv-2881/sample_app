@@ -76,6 +76,7 @@ vi:
       fields:
         email: "Địa chỉ email"
         password: "Mật khẩu"
+        remember_me: "Ghi nhớ tôi trên thiết bị này"
     show_user:
       not_found_msg_html: Không tìm thấy người dùng! Quay về <a href="%{home_url}">Trang chủ</a> hoặc <a href="%{signup_url}">Tạo mới tài khoản</a>.
     not_found_404:

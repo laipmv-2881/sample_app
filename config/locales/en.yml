@@ -72,6 +72,7 @@ en:
       fields:
         email: "E-mail address"
         password: "Password"
+        remember_me: "Remember me on this device"
     show_user:
       not_found_msg_html: User not found! Redirect to <a href="%{home_url}">Home page</a> or <a href="%{signup_url}">Create one</a>.
     not_found_404:
