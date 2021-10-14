@@ -59,4 +59,3 @@ vi:
     error_msg_html: <div id="error_explanation"><div class="alert alert-danger">Biểu mẫu có %{user_error_count}.</div></div>
   label:
     error: "lỗi"
-
