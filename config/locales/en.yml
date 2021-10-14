@@ -25,14 +25,26 @@ en:
               length: "is too short."
             password_confirmation:
               confirmation: "does not match password."
-  pages:
+  custom_errors:
+    invalid_login_msg: "Invalid email/password combination"
+  nav:
     logo: "Sample App"
-    base_title: "Ruby on Rails Tutorial Sample App"
-    welcome: "Welcome to the Sample App"
-    footer_info_html: <small>The <a href="://www.railstutorial.org/"> Ruby on Rails Tutorial</a> by <a href="https://sun-asterisk.vn/">Sun Asterisk</a></small>
-    locale_option:
+    home: "Home"
+    help: "Help"
+    login: "Login"
+    logged_in:
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+    locale_opts:
       eng: "en"
       vi:  "vi"
+  pages:
+    base_title: "Ruby on Rails Tutorial Sample App"
+    welcome_msg: "Welcome to the Sample App"
+    footer_info_html: <small>The <a href="://www.railstutorial.org/"> Ruby on Rails Tutorial</a> by <a href="https://sun-asterisk.vn/">Sun Asterisk</a></small>
     home:
       page_title: "Home"
       welcome: "Welcome to Sample App"
@@ -49,6 +61,17 @@ en:
     signup:
       page_title: "Sign up"
       signup_button: "Create my account"
+      opts:
+        already_created_html: <p>Already created? <a href="%{login_url}">Sign in now!</a></p>
+    login:
+      page_title: "Login"
+      h1: "Log in"
+      login_button: "Login"
+      opts:
+        new_user_html: <p>New user? <a href="%{signup_url}">Sign up now!</a></p>
+      fields:
+        email: "E-mail address"
+        password: "Password"
     show_user:
       not_found_msg_html: User not found! Redirect to <a href="%{home_url}">Home page</a> or <a href="%{signup_url}">Create one</a>.
     not_found_404:

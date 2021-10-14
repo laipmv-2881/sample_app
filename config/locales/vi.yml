@@ -26,10 +26,25 @@ vi:
               length: "quá ngắn."
             password_confirmation:
               confirmation: "không trùng nhau."
-  pages:
+  custom_errors:
+    invalid_login_msg: "Sai địa chỉ email hoặc mật khẩu"
+  nav:
     logo: "Sample App"
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+    logged_in:
+      users: "Người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ"
+      settings: "Thiết lập"
+      logout: "Đăng xuất"
+    locale_opts:
+      eng: "en"
+      vi:  "vi"
+  pages:
     base_title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
-    welcome: "Chào mừng đến với Sample App"
+    welcome_msg: "Chào mừng đến với Sample App"
     footer_info_html: <small>Hướng dẫn về <a href="://www.railstutorial.org/"> Ruby on Rails</a> bởi <a href="https://sun-asterisk.vn/">Sun Asterisk</a></small>
     locale_option:
       eng: "en"
@@ -50,6 +65,17 @@ vi:
     signup:
       page_title: "Đăng ký"
       signup_button: "Tạo tài khoản"
+      opts:
+        already_created_html: <p>Đã có tài khoản? <a href="%{login_url}">Đăng nhập ngay!</a></p>
+    login:
+      page_title: "Đăng nhập"
+      h1: "Đăng nhập"
+      login_button: "Đăng nhập"
+      opts:
+        new_user_html: <p>Chưa có tài khoản? <a href="%{signup_url}">Đăng ký ngay!</a></p>
+      fields:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
     show_user:
       not_found_msg_html: Không tìm thấy người dùng! Quay về <a href="%{home_url}">Trang chủ</a> hoặc <a href="%{signup_url}">Tạo mới tài khoản</a>.
     not_found_404:

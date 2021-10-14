@@ -1,13 +1,30 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to t("pages.logo"), root_path, id: "logo" %>
+    <%= link_to t("nav.logo"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("pages.home.page_title"), home_path %></li>
-        <li><%= link_to t("pages.help.page_title"), help_path %></li>
-        <li><%= link_to t("pages.signup.page_title"), signup_path %></li>
-        <li><%= link_to t("pages.locale_option.eng"), add_locale_to_request_path(:en) %>
-        <li><%= link_to t("pages.locale_option.vi"), add_locale_to_request_path(:vi) %>
+        <li><%= link_to t("nav.home"), home_path %></li>
+        <li><%= link_to t("nav.help"), help_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to t("nav.logged_in.users"), "#" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= t("nav.logged_in.account") %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to t("nav.logged_in.profile"), current_user %></li>
+              <li><%= link_to t("nav.logged_in.settings"), "#" %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to t("nav.logged_in.logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to t("nav.login"), login_path %></li>
+        <% end %>
+        <li><%= link_to t("nav.locale_opts.eng"), add_locale_to_request_path(:en) %>
+        <li><%= link_to t("nav.locale_opts.vi"), add_locale_to_request_path(:vi) %>
       </ul>
     </nav>
   </div>
