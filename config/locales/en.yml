@@ -1,6 +1,24 @@
 en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        email: "E-mail address"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "cannbot be empty."
+              length: "is too long."
+              uniqueness: "has already been used."
   pages:
+    logo: "Sample App"
     base_title: "Ruby on Rails Tutorial Sample App"
+    locale_option:
+      eng: "en"
+      vi:  "vi"
     home:
       page_title: "Home"
       welcome: "Welcome to Sample App"
