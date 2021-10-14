@@ -9,6 +9,6 @@ module StaticPagesHelper
 
   def add_locale_to_request_path locale = ""
     # remove current locale and return a current path with new locale inserted
-    locale.prepend("/").concat(get_request_path_without_locale)
+    locale.to_s.prepend("/").concat(get_request_path_without_locale)
   end
 end

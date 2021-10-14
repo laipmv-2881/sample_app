@@ -1,6 +1,37 @@
 en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "E-mail address"
+        password: "Password"
+        password_confirmation: "Confirmation"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "cannbot be empty."
+              length: "is too long."
+            email:
+              blank: "cannbot be empty."
+              length: "is too long."
+              uniqueness: "has already been used."
+              format: "is invalid. ex: michaeledwards@example.com"
+            password:
+              blank: "cannbot be empty."
+              length: "is too short."
+              confirmation: "does not match password."
   pages:
+    logo: "Sample App"
     base_title: "Ruby on Rails Tutorial Sample App"
+    welcome: "Welcome to the Sample App"
+    footer_info_html: <small>The <a href="://www.railstutorial.org/"> Ruby on Rails Tutorial</a> by <a href="https://sun-asterisk.vn/">Sun Asterisk</a></small>
+    locale_option:
+      eng: "en"
+      vi:  "vi"
     home:
       page_title: "Home"
       welcome: "Welcome to Sample App"
@@ -14,3 +45,17 @@ en:
       page_title: "Contact"
       h1: "Contact"
       body_html: <p> Contact the Ruby on Rails Tutorial about the sample app at the <a href="https://www.railstutorial.org/contact">contact page</a>. </p>
+    signup:
+      page_title: "Sign up"
+      signup_button: "Create my account"
+    show_user:
+      not_found_msg_html: User not found! Redirect to <a href="%{home_url}">Home page</a> or <a href="%{signup_url}">Create one</a>.
+    not_found_404:
+      page_title: "404 Error!"
+    news:
+      page_title: "News"
+      page_url: "https://news.sun-asterisk.com"
+  partial:
+    error_msg_html: <div id="error_explanation"><div class="alert alert-danger">The form contains %{user_error_count}.</div></div>
+  label:
+    error: "error"
