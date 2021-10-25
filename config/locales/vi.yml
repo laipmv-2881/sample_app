@@ -1,6 +1,24 @@
 vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        email: "Địa chỉ e-mail"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "không thể để trống."
+              length: "quá dài."
+              uniqueness: "đã được sử dụng."
   pages:
+    logo: "Sample App"
     base_title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+    locale_option:
+      eng: "en"
+      vi:  "vi"
     home:
       page_title: "Trang chủ"
       welcome: "Chào mừng đến Sample App"
