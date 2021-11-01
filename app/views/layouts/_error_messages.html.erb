@@ -1,0 +1,3 @@
+<% if @user.errors.any? %>
+  <%= t("partial.error_msg_html", user_error_count: pluralize(@user.errors.count, t("label.error"))) %>
+<% end %>

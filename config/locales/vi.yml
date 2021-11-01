@@ -5,17 +5,32 @@ vi:
     attributes:
       user:
         email: "Địa chỉ e-mail"
+        name: "Họ và tên"
+        email: "Địa chỉ e-mail"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
     errors:
       models:
         user:
           attributes:
+            name:
+              blank: "không thể để trống."
+              length: "quá dài."
             email:
               blank: "không thể để trống."
               length: "quá dài."
               uniqueness: "đã được sử dụng."
+              invalid: "không hợp lệ. Vd: michael@example.com"
+            password:
+              blank: "không thể để trống."
+              length: "quá ngắn."
+            password_confirmation:
+              confirmation: "không trùng nhau."
   pages:
     logo: "Sample App"
     base_title: "Ứng dụng mẫu hướng dẫn Ruby on Rails"
+    welcome: "Chào mừng đến với Sample App"
+    footer_info_html: <small>Hướng dẫn về <a href="://www.railstutorial.org/"> Ruby on Rails</a> bởi <a href="https://sun-asterisk.vn/">Sun Asterisk</a></small>
     locale_option:
       eng: "en"
       vi:  "vi"
@@ -32,3 +47,17 @@ vi:
       page_title: "Liên hệ"
       h1: "Liên hệ"
       body_html: <p> Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại <a href="https://www.railstutorial.org/contact">trang liên hệ</a>. </p>
+    signup:
+      page_title: "Đăng ký"
+      signup_button: "Tạo tài khoản"
+    show_user:
+      not_found_msg_html: Không tìm thấy người dùng! Quay về <a href="%{home_url}">Trang chủ</a> hoặc <a href="%{signup_url}">Tạo mới tài khoản</a>.
+    not_found_404:
+      page_title: "404 Error!"
+    news:
+      page_title: "Tin tức"
+      page_url: "https://news.sun-asterisk.com"
+  partial:
+    error_msg_html: <div id="error_explanation"><div class="alert alert-danger">Biểu mẫu có %{user_error_count}.</div></div>
+  label:
+    error: "lỗi"

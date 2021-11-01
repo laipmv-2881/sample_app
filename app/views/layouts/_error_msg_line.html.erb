@@ -1,0 +1,7 @@
+<% if @user.errors.full_messages_for(field_opt).any? %>
+  <% @user.errors.full_messages_for(field_opt).each do |msg| %>
+    <p class="error_msg_line">
+      <%= msg %>
+    </p>
+  <% end %>
+<% end %>
